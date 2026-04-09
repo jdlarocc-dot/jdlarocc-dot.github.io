@@ -1,0 +1,97 @@
+
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+  
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+  */
+  *{
+  --miscColor: #def6caff;
+--accentColor: #f8bdc4ff;
+--base: #f497daff;
+--cardColor: #f679e5ff;
+--borderColor: #f65be3ff;
+}
+
+body {
+  background-color : var(--base);
+  background-image: url(./assets/css-pattern-by-magicpattern.png);
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  font-family: "Inter", sans-serif;
+  color: var(--miscColor);
+  font-size: 32px;
+  font-weight: 600;
+  background-color : var(--borderColor);
+}
+
+.title{
+  font-family: "Roboto", sans-serif;
+  color: var(--miscColor);
+  font-size: 24px;
+  font-weight: 600;
+  background-color: var(--borderColor);
+}
+
+h2{
+  font-family: "Roboto", sans-serif;
+  color: var(--miscColor);
+  font-size: 36px;
+  font-weight: 600;
+  background-color: var(--borderColor);
+}
+
+.cards div {
+  background-color: var(--cardColor);
+  padding: 16px;
+  border: .5px solid var(--borderColor);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.cards div:hover {
+  box-shadow: 8px 8px var(--borderColor);
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  color: var(--miscColor);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: var(--miscColor);
+  font-size: 16px;
+  font-weight: 400;
+}
