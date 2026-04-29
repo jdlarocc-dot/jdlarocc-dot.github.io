@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Site</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<header>
+  <h1 id="greeting">Welcome</h1>
+  <button id="menu-btn">Toggle Menu</button>
+</header>
+
+<nav id="menu">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- Click Event -->
+  <button id="click-btn">Click Me</button>
+  <p id="click-result"></p>
+
+  <!-- Input Event -->
+  <h3>Type something:</h3>
+  <input type="text" id="text-input">
+  <p id="char-count">Characters: 0</p>
+
+  <!-- Hover Event -->
+  <div class="hover-box" id="hover-box">Hover me</div>
+
+</div>
+
+<script>
+  // 1. PAGE LOAD EVENT (Greeting)
+  window.addEventListener("load", function() {
+    const greeting = document.getElementById("greeting");
+    const hour = new Date().getHours();
+
+    if (hour < 12) {
+      greeting.textContent = "Good Morning";
+    } else if (hour < 18) {
+      greeting.textContent = "Good Afternoon";
+    } else {
+      greeting.textContent = "Good Evening";
+    }
+  });
+
+  // 2. CLICK EVENT
+  document.getElementById("click-btn").addEventListener("click", function() {
+    document.getElementById("click-result").textContent = "Button Pressed!";
+  });
+
+  // 3. INPUT EVENT
+  document.getElementById("text-input").addEventListener("input", function(e) {
+    document.getElementById("char-count").textContent =
+      "Characters: " + e.target.value.length;
+  });
+
+  // 4. HOVER EVENT
+  const hoverBox = document.getElementById("hover-box");
+
+  hoverBox.addEventListener("mouseenter", function() {
+    hoverBox.style.background = "#ff4c60";
+  });
+
+  hoverBox.addEventListener("mouseleave", function() {
+    hoverBox.style.background = "#444";
+  });
+
+  // 5. TOGGLE MENU (SHOW/HIDE)
+  document.getElementById("menu-btn").addEventListener("click", function() {
+    const menu = document.getElementById("menu");
+
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  });
+</script>
+
+</body>
+</html>
